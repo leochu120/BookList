@@ -1,0 +1,32 @@
+﻿@model Book
+
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary"> Edit State</h2>
+			<hr/>
+		</div>
+		<div class="mg-3">
+			<label asp-for="Title"></label>
+			<input asp-for="Title" class="form-control" />
+		</div>
+		<br />
+		<div class="mg-3">
+			<label asp-for="stateFinished">Have you finished the book?</label>
+			<input type="checkbox" asp-for="stateFinished" />
+		</div>
+		<br />
+		<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+		<a asp-controller="Book" asp-action="Index" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial"></partial>
+	}
+}
+
+
